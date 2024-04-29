@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prenotazione ristorante</h1>
+      <form action="/frontend.esami-main/pagina2.html">
+        <label>Nome:</label><br>
+        <input type="text" id="nome" maxlength="40" required><br>
+
+        <label>Cognome:</label><br>
+        <input type="text" id="cognome" maxlength="40" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" maxlength="40" required><br>
+
+        <label>Numero di telefono:</label><br>
+        <input type="number" id="telefono"  maxlength="40" required><br>
+
+        <label>Note della prenotazione:</label><br>
+        <input type="text" id="note" maxlength="200"><br>
+
+        <label>Numero di coperti</label><br>
+        <input type="number" id="coperti" required><br>
+
+        <label>Ristorante di riferimento:</label><br>
+        <input type="text" id="ristorante" maxlength="40" required><br>
+
+        <label>Data:</label><br>
+        <input type="datetime-local" id="data" required><br>
+        <input type="datetime-local" id="data" required><br>
+
+        <button type="submit">Cerca disponibilità</button>
+      </form>
+    </div>
+  </body>
+</html>
