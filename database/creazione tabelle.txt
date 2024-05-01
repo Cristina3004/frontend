@@ -1,0 +1,52 @@
+```sql
+-- Creazione Database
+CREATE database ristorante;
+
+USE ristorante;
+
+-- Tabella Chef
+CREATE TABLE Chef (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    cognome VARCHAR(50),
+    email VARCHAR(100),
+    cellulare VARCHAR(15),
+    specializzazione VARCHAR(100)
+);
+
+-- Tabella Persona
+CREATE TABLE Persona (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    cognome VARCHAR(50),
+    email VARCHAR(100),
+    cellulare VARCHAR(15)
+);
+
+-- Tabella Cliente
+CREATE TABLE Cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    persona_id INT,
+    intolleranza VARCHAR(100),
+    FOREIGN KEY (persona_id) REFERENCES Persona(id)
+);
+
+-- Tabella Ristorante
+CREATE TABLE Ristorante (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    indirizzo VARCHAR(255)
+);
+
+-- Tabella Prenotazione
+CREATE TABLE Prenotazione (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    note TEXT,
+    data DATETIME,
+    coperti INT,
+    ristorante_id INT,
+    cliente_id INT,
+    FOREIGN KEY (ristorante_id) REFERENCES Ristorante(id),
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
+);
+```

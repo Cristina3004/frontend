@@ -1,0 +1,5 @@
+SELECT P.*
+FROM Prenotazione P
+JOIN Ristorante R ON P.ristorante_id = R.id
+WHERE P.data BETWEEN '2024-05-01 00:00:00' AND '2024-05-31 23:59:59'
+AND R.nome = 'Ristorante da Mario';
