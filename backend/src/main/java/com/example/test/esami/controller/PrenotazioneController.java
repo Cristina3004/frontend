@@ -65,8 +65,4 @@ public class PrenotazioneController {
 
         return "Codice Prenotazione 1234 per la data:" + data.toString();
     }
-
-
-
-
 }

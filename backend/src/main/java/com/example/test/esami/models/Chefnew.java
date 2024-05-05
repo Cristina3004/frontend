@@ -1,14 +1,14 @@
 package com.example.test.esami.models;
 
-public class Chef extends Persona{
+public class Chefnew extends Persona{
     private String specializzazione;
 
-    public Chef(String nome, String cognome, String email, String cellulare, String specializzazione) {
+    public Chefnew(String nome, String cognome, String email, String cellulare, String specializzazione) {
         super(nome, cognome, email, cellulare);
         this.specializzazione = specializzazione;
     }
 
-    public Chef(){}
+    public Chefnew(){}
 
 
     public String getSpecializzazione() {
